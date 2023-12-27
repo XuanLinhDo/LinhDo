@@ -1,3 +1,5 @@
+<%@page import="entity.Product"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -35,6 +37,46 @@ https://www.tooplate.com/view/2127-little-fashion
     </head>
     
     <body>
+<%
+		ArrayList<Product> list = new ArrayList<>();
+		Product p1 = new Product();
+		p1.setId(1);
+		p1.setName("SugarPlum FanFare Edition Parachutes");
+		p1.setPrice(13);
+		list.add(p1);
+
+		Product p2 = new Product();
+		p2.setId(2);
+		p2.setName("Awol - Decaf Blend");
+		p2.setPrice(22);
+		list.add(p2);
+
+		Product p3 = new Product();
+		p3.setId(3);
+		p3.setName("Killerbee");
+		p3.setPrice(20);
+		list.add(p3);
+
+		Product p4 = new Product();
+		p4.setId(4);
+		p4.setName("Honduras Los Nacimientos By Jose Wilman Benitez");
+		p4.setPrice(24);
+		list.add(p4);
+
+		Product p5 = new Product();
+		p5.setId(5);
+		p5.setName("Kenya Karatina AA By Barichu Coop.");
+		p5.setPrice(26);
+		list.add(p5);
+
+		Product p6 = new Product();
+		p6.setId(6);
+		p6.setName("Gesha Duo By Elias & Shady Bayter");
+		p6.setPrice(50);
+		list.add(p6);
+
+		pageContext.setAttribute("list", list);
+		%>
 
         <section class="preloader">
             <div class="spinner">
